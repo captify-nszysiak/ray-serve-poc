@@ -6,7 +6,7 @@ Download model (can be baked into Docker image- I did not want to push big model
 
 Run Ray server locally:
 - pip install -r requirements.txt 
-- serve run server:predictor_app
+- sudo serve run server:predictor_app (run with sudo to see CPU Flame Graph)
 
 To call the Ray server:
 - python client.py

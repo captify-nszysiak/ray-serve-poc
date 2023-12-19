@@ -1,10 +1,10 @@
 import requests
 
-# input = "['one direction edinburgh one direction edinburgh girlguiding edinburgh young adult books edinburgh " \
-#                "edinburgh hamster accessories hamster accessories edinburgh hamster accessories edinburgh hamster " \
-#                "accessories edinburgh'] "
+input = "['one direction edinburgh one direction edinburgh girlguiding edinburgh young adult books edinburgh " \
+               "edinburgh hamster accessories hamster accessories edinburgh hamster accessories edinburgh hamster " \
+               "accessories edinburgh'] "
 
-input = "one direction"
+# input = "one direction"
 
 response = requests.post("http://127.0.0.1:8000/", json=input)
 response = response.text
