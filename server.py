@@ -1,3 +1,5 @@
+from typing import Dict, Any
+
 from transformers import AutoTokenizer
 import onnxruntime
 from fastapi import Request
@@ -36,7 +38,7 @@ class ONNXDummyModel:
 
         return predictions
 
-    async def __call__(self, http_request: Request) -> str:
+    async def __call__(self, http_request: Request) -> dict[str, Any]:
         data = await http_request.json()
         predictions = self.predict(data)
         return {"predictions": predictions.tolist()}
